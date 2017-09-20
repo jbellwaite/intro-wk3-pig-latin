@@ -6,7 +6,7 @@ $(document).ready(function() {
     var input = $("input#original-input").val();
     var vowels= ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
     var inputArray= [""]
-
+    //var sliceArray= [""]
 // Code for single letter word beginning vowel
     //   for (var i = 0; i < input.length; i++) {
     //   if (vowels.includes(input.charAt(i))) {
@@ -20,7 +20,11 @@ $(document).ready(function() {
     if (vowels.includes(input.charAt(0))) {
       inputArray.push(input + "way");
     } else {
-      inputArray.charAt(0).splice(0 , 1)
+
+      var sliceArray = [input.charAt(0).slice(0 , 1)];
+      var otherArray = [input.slice(1)];
+      inputArray.push(otherArray+ sliceArray + "ay");
+
     }
 
 
