@@ -5,15 +5,13 @@ $(document).ready(function() {
     event.preventDefault();
     var input = $("input#original-input").val();
     var vowels= ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
-
+    var inputArray= [""]
       for (var i = 0; i < input.length; i++) {
       if (vowels.includes(input.charAt(i))) {
-        $("#outputTrue").show();
-      } else {
-        $("#outputFalse").show();
+        inputArray.push(input.charAt(i) + "way");
       }
     }
 
-    //$("#output").text(result);
+    $("#output").text(inputArray.join(" "));
   });
 });
